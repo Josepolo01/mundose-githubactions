@@ -26,7 +26,7 @@ jobs:
     - name: Build the Docker image app
       run: |
         cd src/app
-        docker build -t frontend:$VERSION .
+        docker build -t image-app:$VERSION .
         docker images
         docker tag frontend:$VERSION $REGISTRY/frontend:$VERSION
         docker push $REGISTRY/frontend:$VERSION
