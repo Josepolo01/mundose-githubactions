@@ -28,8 +28,8 @@ jobs:
         cd src/app
         docker build -t image-app:$VERSION .
         docker images
-        docker tag frontend:$VERSION $REGISTRY/frontend:$VERSION
-        docker push $REGISTRY/frontend:$VERSION
+        docker tag image-app:$VERSION $REGISTRY/image-app:$VERSION
+        docker push $REGISTRY/image-app:$VERSION
     - name: Build the Docker image consumer
       run: |
         cd src/consumer
